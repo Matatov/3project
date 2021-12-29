@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="194.0" layoutX="68.0" layoutY="113.0" stroke="#b5b5b5" strokeType="INSIDE" width="315.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="68.0" layoutY="20.0" stroke="#b5b5b5" strokeType="INSIDE" width="497.0" />
+      <Text layoutX="133.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to BiteMe" wrappingWidth="378.083984375">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="14.0" layoutY="14.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="161.0" fitWidth="161.0" layoutX="405.0" layoutY="125.0">
+         <image>
+            <Image url="@img_QR.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="196.0" layoutY="125.0" prefHeight="31.0" prefWidth="86.0" text="Login">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="182.0" text="UserName*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="230.0" prefHeight="23.0" prefWidth="90.0" text="Password*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="188.0" layoutY="180.0" onAction="#getUsername" prefHeight="27.0" prefWidth="175.0" style="-fx-background-radius: 3em; -fx-border-radius: 3em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <PasswordField fx:id="txtPassword" layoutX="188.0" layoutY="228.0" prefHeight="27.0" prefWidth="175.0" style="-fx-background-radius: 3em; -fx-border-radius: 3em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label fx:id="lblMessage" layoutX="104.0" layoutY="322.0" prefHeight="17.0" prefWidth="413.0" />
+      <ImageView fitHeight="50.0" fitWidth="76.0" layoutX="14.0" layoutY="305.0" onMouseClicked="#getExitBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="86.0" layoutX="276.0" layoutY="251.0" onMouseClicked="#getLoginBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_login.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BMManagerManageDataFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="67.0" layoutX="84.0" layoutY="18.0" stroke="#b5b5b5" strokeType="INSIDE" width="466.0" />
+      <ImageView fitHeight="80.0" fitWidth="82.0" layoutX="20.0" layoutY="11.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="UsersTbl" layoutX="52.0" layoutY="110.0" onMouseClicked="#getSelectedCustomer" prefHeight="184.0" prefWidth="529.0">
+        <columns>
+          <TableColumn fx:id="customerIDColumn" prefWidth="85.0" text="Customer ID" />
+          <TableColumn fx:id="W4CColumn" prefWidth="72.0" text="W4C" />
+            <TableColumn fx:id="userNameColumn" text="User Name" />
+            <TableColumn fx:id="passwordColumn" prefWidth="79.0" text="Password" />
+            <TableColumn fx:id="accountTypeColumn" prefWidth="114.0" text="Account type" />
+            <TableColumn fx:id="currentStatusColumn" prefWidth="98.0" text="Current status" />
+        </columns>
+      </TableView>
+      <Label layoutX="169.0" layoutY="26.0" text="Manage users data">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="312.0" text="Change status:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMessage" layoutX="108.0" layoutY="364.0" prefHeight="17.0" prefWidth="427.0" />
+      <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="15.0" layoutY="339.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="62.0" layoutX="550.0" layoutY="333.0" onMouseClicked="#getChangeBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_update.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmpStatus" layoutX="301.0" layoutY="309.0" onAction="#getSelectedStatus" prefWidth="150.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+   </children>
+</AnchorPane>

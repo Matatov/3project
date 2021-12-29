@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CustomerViewOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="58.0" layoutX="80.0" layoutY="27.0" stroke="#b5b5b5" strokeType="INSIDE" width="613.0" />
+      <ImageView fitHeight="72.0" fitWidth="81.0" layoutX="22.0" layoutY="21.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTitle" layoutX="219.0" layoutY="33.0" text="*Customer* Orders">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="100.0" prefHeight="27.0" prefWidth="181.0" text="Choose order number:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpOrderNum" layoutX="372.0" layoutY="100.0" onAction="#getSelectedOrderNumber" prefHeight="27.0" prefWidth="117.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111; -fx-cursor: hand;" />
+      <TableView fx:id="OrderTbl" layoutX="27.0" layoutY="165.0" prefHeight="211.0" prefWidth="322.0">
+        <columns>
+            <TableColumn fx:id="orderNumColumn" prefWidth="104.0" text="Order Num" />
+            <TableColumn fx:id="statusColumn" prefWidth="90.0" text="Status" />
+            <TableColumn fx:id="restaurantColumn" prefWidth="126.5" text="Restaurant" />
+        </columns>
+      </TableView>
+      <TableView fx:id="DeliveryTbl" layoutX="364.0" layoutY="165.0" prefHeight="211.0" prefWidth="361.0">
+         <columns>
+            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="112.5" text="Date" />
+            <TableColumn fx:id="timeColumn" prefWidth="105.0" text="Time" />
+            <TableColumn fx:id="deliveryTypeColumn" prefWidth="142.5" text="Delivery Type" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="17.0" layoutY="392.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="49.0" layoutX="679.0" layoutY="388.0" onMouseClicked="#getUpdateBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_update.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
